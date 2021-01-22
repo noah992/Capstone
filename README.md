@@ -38,6 +38,13 @@ ___
 
 I will gather images of 10 cathedrals from Google search result using [Image Downloader](https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj)
 
+My model requires the images to be below
+* Similar - Angle, distance
+* RGB - Filter out Gray, RGBA
+* Same shape - (1200, 800, 3) → (256, 256, 3)
+
+#### Similar
+
 Some images has a front side of an object, some has back side of the object and some others are taken at very far away. If I take all of these images into my model together, it would not learn effectively so that I need to gather images which are visually similar.
 
 Below 2 images contain same object, but it looks different as they were taken at different angle and distance. Also second one is colored by light.
@@ -46,34 +53,36 @@ Data set of these combination would not be rational so that I gather images simi
 <img src="https://github.com/noah992/Capstone/blob/master/assets/data-collecting-01.JPG?raw=true" width="200pt"> <img src="https://github.com/noah992/Capstone/blob/master/assets/data-collecting-02.JPG?raw=true" width="300pt">
 
 
-Some pictures are in gray scale, others are in color, and some others have alpha information. I need to feed formatted images 
+### RGB
 
-I found some images are gray scale, and some other has alpha information. I want to only have `RGB` images because if array shape of images are different, I cannot feed them into a model.
+Some pictures are in gray scale, others are in color, and some others have alpha information. As I need to feed formatted images, I will take only `RGB` images.
 
 >Third index of the data shape stores color information and this number must be same
-
 >|Color|Shape|
 >|-|-|
 >|RGBα|(1200, 450,  `4`)|
 >|RGB|(428, 678, `3`)|
 >|Gray|(564, 680, `1`)|
 
+### Same shape
+
+Height and width of images vary. I converted the images to have same shape.
+
 >So I want to organize images from below:
 >|Image|Color information|Height|Width|
 >|-|-|-|-|
->|Plato_1|RGBα|566|728|
->|Plato_2|RGB|780|1100|
->|NotreDame_1|P|1200|728|
->|NotreDame_2|RGB|875|511|
+>|Plato_2|780|1100|
+>|NotreDame_2|875|511|
 >...
 >
 >to below.
 >|Image|Color information|Height|Width|
 >|-|-|-|-|
->|Plato_2|RGB|256|256|
->|NotreDame_2|RGB|255|255|
+>|Plato_2|256|256|
+>|NotreDame_2|255|255|
 >...
 
+### Target objects
 
 >|10 Cathedrals in this model|
 >|-|
