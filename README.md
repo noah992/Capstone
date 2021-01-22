@@ -48,13 +48,13 @@ which helps you to find certain information regarding an object that you are cur
 
 
 ___
-## Data collecting
+## Data set
 
 I gathered around 100 images for each object using [Image Downloader](https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj) from Google search result.
 Get images to detect and mix those images with any images, but the any images must not have the object you want to detect. I will create a model which detects the object.This is Notre Dame. I will detect this.
 There are many images which were taken at various angle and colored with some filters. I pick up pictures which look similar in perspective of colors and angles. I used 300 images for this model
 Image for post
-Other image can be anything. but quantity of picture should be close to Notre Dame. I will collect 200–400 pictures.
+
 
 |Cathedral|
 |-|
@@ -71,8 +71,8 @@ Other image can be anything. but quantity of picture should be close to Notre Da
 
 
 ![Catedral de La Plata_100.jpg](https://github.com/noah992/Capstone/blob/master/image/Catedral%20de%20La%20Plata/Catedral%20de%20La%20Plata_100.jpg?raw=true)
-___
-## EDA
+![dd](https://github.com/noah992/Capstone/blob/master/assets/data-collecting-02.JPG?raw=true)
+![ee](https://github.com/noah992/Capstone/blob/master/assets/data-collecting-01.JPG?raw=true)
 
 Clean and format images. Some pictures are taken in gray scale. Some are in color, and some has alpha information. In order to train a model, I need to feed formatted images so I will collect only RGB images.
 If I do not format the images, the shapes will be different and I cannot train a model with different shaped images.
