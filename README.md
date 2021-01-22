@@ -43,7 +43,7 @@ My model requires the images to be below
 * RGB - Filter out Gray, RGBA
 * Same shape - (1200, 800, 3) → (256, 256, 3)
 
-#### Similar
+### Similar
 
 Some images has a front side of an object, some has back side of the object and some others are taken at very far away. If I take all of these images into my model together, it would not learn effectively so that I need to gather images which are visually similar.
 
@@ -69,14 +69,14 @@ Some pictures are in gray scale, others are in color, and some others have alpha
 Height and width of images vary. I converted the images to have same shape.
 
 >So I want to organize images from below:
->|Image|Color information|Height|Width|
+>|Image|Height|Width|
 >|-|-|-|-|
 >|Plato_2|780|1100|
 >|NotreDame_2|875|511|
 >...
 >
 >to below.
->|Image|Color information|Height|Width|
+>|Image|Height|Width|
 >|-|-|-|-|
 >|Plato_2|256|256|
 >|NotreDame_2|255|255|
