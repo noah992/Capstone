@@ -114,7 +114,7 @@ You can see what image I fed on the second page.
 This app loaded the image and neural network model which I assembled worked on the backend and generated prediction of what the object is in the image.
 Based on the result of the prediction, it navigate you to the locatoin with google map.
 
-You may consider to deploy image recognition as search option as it definitely improve user experience. As I mentioned in Problem, visitors could not be sure which cathedral is which as they looks similar so it could be hard to identify a cathedral for them by searching with some keywords however, they would be happy using image search because it would be much easier and faster.
+You may consider to deploy image recognition as search option as it definitely improve user experience. As I mentioned in Problem, visitors could not be sure which cathedral is which as they looks similar so it could be hard to identify a cathedral for them by searching with some keywords however, they would be happy using image search because it would be much easier and faster for such case.
 
 ---
 
@@ -122,4 +122,4 @@ You may consider to deploy image recognition as search option as it definitely i
 
 I used images which are taken at similar angle, similar distance and similar color. So if I feed images which were taken in different angle or with different light color, this model is likely to fail to predict correct location.
 
-I could improve the accuracy by feeding various kinds of pictures in terms of angle and color, this app will be greater as it can be more flexible on picture variation
+I can surely improve the accuracy by feeding more training images, and also it will be more useful to train with various kinds of pictures in terms of angle and color because this model will be more flexible on picture variations
