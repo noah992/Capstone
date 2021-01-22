@@ -5,9 +5,8 @@
 
 This repo contains code of convolutional neural network model for image recognition and its images
 
-> * [Code](https://github.com/noah992/Capstone/blob/main/code/code.ipynb)
-> * [Images](https://github.com/noah992/Capstone/tree/main/data)
-> * [Demonstration](https://github.com/noah992/Capstone/blob/main/image/demonstration.gif)
+> * [Code](https://github.com/noah992/Capstone/blob/master/code/code.ipynb)
+> * [Images](https://github.com/noah992/Capstone/tree/master/image)
 
 ## Summary
 
@@ -71,7 +70,7 @@ Other image can be anything. but quantity of picture should be close to Notre Da
 |Patriarchal Cathedral ST. Alexander Nevsky|
 
 
-![Catedral de La Plata_100.jpg](https://github.com/noah992/Capstone/blob/main/data/Catedral%20de%20La%20Plata/Catedral%20de%20La%20Plata_100.jpg)
+![Catedral de La Plata_100.jpg](https://github.com/noah992/Capstone/blob/master/image/Catedral%20de%20La%20Plata/Catedral%20de%20La%20Plata_100.jpg?raw=true)
 ___
 ## EDA
 
