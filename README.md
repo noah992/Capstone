@@ -24,27 +24,13 @@ This repo contains code of convolutional neural network model for image recognit
 ---
 ## Problem Statement
 
-Iamge recognition is widely used and it improves our search performance a lot.
-One major use case of image recogition is deployment on EC site. Some EC site such as Amazo, Taobao, has search option where you can upload pictures of what you want,
-and the website looks for similar objects for you.
-Especially when you want specific cloths because it is common to happen that you are not sure what brand the good looking jacket is and it is difficult to describe how it looks.
-You could not find the jacket describing that the jacket is green, wide neck or silk because all of these is applied on many various kinds of cloths.
-It is very helpful if you can use a picture of the jacket and websites find it for you.
+Iamge recognition is widely used and it improves our search performance a lot. One major use case of image recogition is deployment on EC site. Some EC sites such as Amazon, ZARA, has a search option where you can upload a picture of items that you want to buy and then the website will look for the items or similar items for you.
 
-I worked on to create similar function with sightseeing objects. I created classification model trained with images of sightseeing objects.
-This model recognizes which picture is which object and probide you certain information of the object.
+Especially it is deployed on many fashion related EC sites because it is common to happen that you are not sure what brand the good looking jacket is and it is difficult to describe how it looks. You could not find the jacket describing that the jacket is green, made with silk or else because all of these features can be applied on many various kinds of cloths. It is very helpful if you can use a picture of the jacket and the websites find it for you.
 
-One initial technical problem is that I could not deal with very many kinds of sightseeing objects due to machine spec and time constraint.
-Also I would like to choose the objects which is somewhat related so I concluded to pick up 10 kinds of cathedrals.
+I worked on to create similar function with sightseeing objects using a multi-classification model trained with images of several sightseeing objects. This model recognizes which object is in the picture. Convolutional neural network model is appropriate for this problem as I use images as prediction values.
 
-Many EC site which sells cloths deploy image search function and Amazon is one of those store.
-You can upload a picuture of cloths and Amazon finds you the similar cloths.
-I introduce use of image recognition which saves your time when you look for something online.
-that you can find items with its image on EC site.
-I made an image recognition model that improves your search experience.
-More specifically, this will help you to get locaton of sight seeing spots
-
-which helps you to find certain information regarding an object that you are curious of using its images.
+One initial technical problem is that I could not deal with very many kinds of sightseeing objects due to machine spec and time constraint so that I chosed only 10 objects which are somewhat related. After all I decided to use 10 kinds of cathedrals as these are famous places for visitors and I bet their appearances are relatively similar to one another so that many visitors could not be sure which cathedral they want to go.
 
 
 ___
