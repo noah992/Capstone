@@ -105,7 +105,7 @@ ___
 ## Reccomendation
 
 I made an app to demonstrate how you could use the image recognition on your website.
-![demonstration](https://github.com/noah992/Capstone/blob/main/image/demonstration.gif)
+![demonstration](https://github.com/noah992/Capstone/blob/master/assets/demonstration.gif?raw=true)
 In this app, I fed an url of image. This is a cathedral located in Brazil.
 You can see what image I fed on the second page.
 This app loaded the image and neural network model which I assembled worked on the backend and generated prediction of what the object is in the image.
