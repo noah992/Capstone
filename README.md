@@ -36,32 +36,27 @@ One initial technical problem is that I could not deal with very many kinds of s
 ___
 ## Data set
 
-I gathered around 100 images for each object using [Image Downloader](https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj) from Google search result.
-Get images to detect and mix those images with any images, but the any images must not have the object you want to detect. I will create a model which detects the object.This is Notre Dame. I will detect this.
-There are many images which were taken at various angle and colored with some filters. I pick up pictures which look similar in perspective of colors and angles. I used 300 images for this model
-Image for post
+I will gather images of 10 cathedrals from Google search result using [Image Downloader](https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj)
+
+Some images has a front side of an object, some has back side of the object and some others are taken at very far away. If I take all of these images into my model together, it would not learn effectively so that I need to gather images which are visually similar.
+
+Below 2 images contain same object, but it looks different as they were taken at different angle and distance. Also second one is colored by light.
+Data set of these combination would not be rational so that I gather images similar to first one.
+
+<img src="https://github.com/noah992/Capstone/blob/master/assets/data-collecting-01.JPG?raw=true" width="200pt"> <img src="https://github.com/noah992/Capstone/blob/master/assets/data-collecting-02.JPG?raw=true" width="300pt">
 
 
-|Cathedral|
-|-|
-|The Cathedral Church of St. John the Divine|
-|Catedral Metropolitana Nossa Senhora Aparecida|
-|Patrick’s Cathedral|
-|Catedral de La Plato|
-|Cathedral Basilica of the Sacred Heart|
-|Cathédrale Notre-Dame de Chartres|
-|Cattedrale di Santa Maria del Fiore|
-|Kölner Dom|
-|St. Paul's Cathedral|
-|Patriarchal Cathedral ST. Alexander Nevsky|
+Some pictures are in gray scale, others are in color, and some others have alpha information. I need to feed formatted images 
 
+I found some images are gray scale, and some other has alpha information. I want to only have `RGB` images because if array shape of images are different, I cannot feed them into a model.
 
-![Catedral de La Plata_100.jpg](https://github.com/noah992/Capstone/blob/master/image/Catedral%20de%20La%20Plata/Catedral%20de%20La%20Plata_100.jpg?raw=true)
-![dd](https://github.com/noah992/Capstone/blob/master/assets/data-collecting-02.JPG?raw=true)
-![ee](https://github.com/noah992/Capstone/blob/master/assets/data-collecting-01.JPG?raw=true)
+>Third index of the data shape stores color information and this number must be same
 
-Clean and format images. Some pictures are taken in gray scale. Some are in color, and some has alpha information. In order to train a model, I need to feed formatted images so I will collect only RGB images.
-If I do not format the images, the shapes will be different and I cannot train a model with different shaped images.
+>|Color|Shape|
+>|-|-|
+>|RGBα|(1200, 450,  `4`)|
+>|RGB|(428, 678, `3`)|
+>|Gray|(564, 680, `1`)|
 
 >So I want to organize images from below:
 >|Image|Color information|Height|Width|
@@ -78,6 +73,20 @@ If I do not format the images, the shapes will be different and I cannot train a
 >|Plato_2|RGB|256|256|
 >|NotreDame_2|RGB|255|255|
 >...
+
+
+>|10 Cathedrals in this model|
+>|-|
+>|The Cathedral Church of St. John the Divine|
+>|Catedral Metropolitana Nossa Senhora Aparecida|
+>|Patrick’s Cathedral|
+>|Catedral de La Plato|
+>|Cathedral Basilica of the Sacred Heart|
+>|Cathédrale Notre-Dame de Chartres|
+>|Cattedrale di Santa Maria del Fiore|
+>|Kölner Dom|
+>|St. Paul's Cathedral|
+>|Patriarchal Cathedral ST. Alexander Nevsky|
 
 ___
 ## Model, Evaluation
