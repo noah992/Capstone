@@ -70,14 +70,14 @@ Height and width of images vary. I converted the images to have same shape.
 
 >So I want to organize images from below:
 >|Image|Height|Width|
->|-|-|-|-|
+>|-|-|-|
 >|Plato_2|780|1100|
 >|NotreDame_2|875|511|
 >...
 >
 >to below.
 >|Image|Height|Width|
->|-|-|-|-|
+>|-|-|-|
 >|Plato_2|256|256|
 >|NotreDame_2|255|255|
 >...
@@ -114,7 +114,7 @@ You can see what image I fed on the second page.
 This app loaded the image and neural network model which I assembled worked on the backend and generated prediction of what the object is in the image.
 Based on the result of the prediction, it navigate you to the locatoin with google map.
 
-Deploying of image recognition as search option will resulted in improvement of user experience
+You may consider to deploy image recognition as search option as it definitely improve user experience. As I mentioned in Problem, visitors could not be sure which cathedral is which as they looks similar so it could be hard to identify a cathedral for them by searching with some keywords however, they would be happy using image search because it would be much easier and faster.
 
 ---
 
