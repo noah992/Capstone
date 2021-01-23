@@ -38,19 +38,19 @@ After all I decided to use 10 kinds of cathedrals as these are famous places for
 ___
 ## Data set
 
-I will gather images of 10 cathedrals from Google search result using [Image Downloader](https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj)
+I gathered images of 10 cathedrals from Google search result using Chrome extension, [Image Downloader](https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj)
 
-My model requires the images to be below
+These images need to satisfy  below
 * Similar - Angle, distance
 * RGB - Filter out Gray, RGBA
 * Same shape - (1200, 800, 3) → (256, 256, 3)
 
 ### Similar
 
-Some images has a front side of an object, some has back side of the object and some others are taken at very far away. If I take all of these images into my model together, it would not learn effectively so that I need to gather images which are visually similar.
+Some images has a front side of an object, some has back side of the object and some others ware taken at very far away. If I take all of these images into the model together, it would not learn effectively so that I need to gather images which are visually similar.
 
-Below 2 images contain same object, but it looks different as they were taken at different angle and distance. Also second one is colored by light.
-Data set of these combination would not be rational so that I gather images similar to first one.
+Below 2 images contain same object, but it looks different as they were taken at different angle and distance. Also second one is colored by a light.
+Using data set of these combination would not be rational so that I gathered images only similar to first one.
 
 <img src="https://github.com/noah992/Capstone/blob/master/assets/data-collecting-01.JPG?raw=true" width="200pt"> <img src="https://github.com/noah992/Capstone/blob/master/assets/data-collecting-02.JPG?raw=true" width="300pt">
 
@@ -68,7 +68,7 @@ Some pictures are in gray scale, others are in color, and some others have alpha
 
 ### Same shape
 
-Height and width of images vary. I converted the images to have same shape.
+Height and width of images are various. I converted the images to have same shape.
 
 >So I want to organize images from below:
 >|Image|Height|Width|
@@ -105,23 +105,22 @@ ___
 I used convolutional neural network model with `tensorflow Sequential`
 
 **90% Accuracy with unseen data**
-Surely this can be closer to 100% with more images
 ___
 ## Reccomendation
 
 I made an app to demonstrate how you could use the image recognition on your website.
 ![demonstration](https://github.com/noah992/Capstone/blob/master/assets/demonstration.gif?raw=true)
-In this app, I fed an url of image. This is a cathedral located in Brazil.
-You can see what image I fed on the second page.
-This app loaded the image and neural network model which I assembled worked on the backend and generated prediction of what the object is in the image.
-Based on the result of the prediction, it navigate you to the locatoin with google map.
+In this app, I fed a url of image. This is a cathedral located in Brazil.
+You can see what image I fed on the second screen.
+This app loaded the image and neural network model which I assembled worked on the background and generated a prediction of what the object is in the image.
+Based on the result of the prediction, it navigates you to the locatoin on google map.
 
-You may consider to deploy image recognition as search option as it definitely improve user experience. As I mentioned in Problem, visitors could not be sure which cathedral is which as they looks similar so it could be hard to identify a cathedral for them by searching with some keywords however, they would be happy using image search because it would be much easier and faster for such case.
+You may consider to deploy image recognition as search option as it definitely improve user experience. As I mentioned in `Problem Statement`, visitors could not be sure which cathedral is which as they look similar so it could be hard to identify a cathedral for them by searching with keywords however, they would be happy using image search because it would be much easier and faster for this case.
 
 ---
 
 ## Next step
 
-I used images which are taken at similar angle, similar distance and similar color. So if I feed images which were taken in different angle or with different light color, this model is likely to fail to predict correct location.
+I used images which are taken at similar angle, similar distance and similar color. So if I make a prediction with images which were taken in different angle or with different light color, this model is likely to fail to predict correct location.
 
 I can surely improve the accuracy by feeding more training images, and also it will be more useful to train with various kinds of pictures in terms of angle and color because this model will be more flexible on picture variations
