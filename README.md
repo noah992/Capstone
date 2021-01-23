@@ -28,9 +28,11 @@ Iamge recognition is widely used and it improves our search performance a lot. O
 
 Especially it is deployed on many fashion related EC sites because it is common to happen that you are not sure what brand the good looking jacket is and it is difficult to describe how it looks. You could not find the jacket describing that the jacket is green, made with silk or else because all of these features can be applied on many various kinds of cloths. It is very helpful if you can use a picture of the jacket and the websites find it for you.
 
-I worked on to create similar function with sightseeing objects using a multi-classification model trained with images of several sightseeing objects. This model recognizes which object is in the picture. Convolutional neural network model is appropriate for this problem as I use images as prediction values.
+I worked on to create similar function using a multi-classification model trained with images of several sightseeing objects. This model recognizes which object is in a picture. For this model, convolutional neural network is appropriate as this predicts based on images
 
-One initial technical problem is that I could not deal with very many kinds of sightseeing objects due to machine spec and time constraint so that I chosed only 10 objects which are somewhat related. After all I decided to use 10 kinds of cathedrals as these are famous places for visitors and I bet their appearances are relatively similar to one another so that many visitors could not be sure which cathedral they want to go.
+One initial technical problem is that I could not deal with very many kinds of sightseeing objects due to machine spec and time constraint so that I chosed only 10 objects which are somewhat related.
+
+After all I decided to use 10 kinds of cathedrals as these are famous places for visitors and I bet their appearances are relatively similar to one another so that many visitors could be confused when they want to go certain cathedral.
 
 
 ___
