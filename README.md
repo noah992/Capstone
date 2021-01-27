@@ -82,7 +82,7 @@ Height and width of images are various. I converted the images to have same shap
 >|Image|Height|Width|
 >|-|-|-|
 >|Plato_2|256|256|
->|NotreDame_2|255|255|
+>|NotreDame_2|256|256|
 >...
 
 ### Target objects
