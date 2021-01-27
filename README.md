@@ -7,6 +7,7 @@ This repo contains code of convolutional neural network model for image recognit
 
 > * [Code](https://github.com/noah992/Capstone/blob/master/code/code.ipynb)
 > * [Images](https://github.com/noah992/Capstone/tree/master/image)
+> * [Slide](https://github.com/noah992/Capstone/blob/master/assets/Presentation.pdf)
 
 ## Summary
 
